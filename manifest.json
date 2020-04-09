@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Einstein",
+    "description": "Now that you have plenty of time on our hands because of the corona virus lockdown, you may as well start exercising your brain...",
+    "version": "0.1",
+    "author": "Manuel Fernandes <mfernandes777@gmail.com>",
+    "homepage_url": "https://github.com/tinoni/einstein",
+    "icons": {
+        "16": "16.png",
+        "48": "48.png",
+        "128": "128.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["jquery-3.4.1.min.js", "scramble_page.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "48.png"
+    }
+}

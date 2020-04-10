@@ -33,11 +33,4 @@ scramble_page = function() {
 
 
 
-
-chrome.runtime.onMessage.addListener(
-    function(request, sender, sendResponse) {
-        if( request.message === "clicked_browser_action" ) {
-            scramble_page();
-        }
-    }
-);
+scramble_page();
